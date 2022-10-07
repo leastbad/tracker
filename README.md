@@ -1,24 +1,5 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run the app with `bin/dev`
+In a seperate terminal, run `redis-cli`
+Open the app in your browser, and open the console inspector
+In the Redis client, type `set mykey test`
+You should see a notification in your foreman log and in the console inspector
