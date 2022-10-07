@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.1.0",
+    "@hotwired/turbo-rails": "^7.2.0",
+    "esbuild": "^0.15.10",
+    "cable_ready": "5.0.0-pre9",
+    "stimulus_reflex": "3.5.0-pre9",
+    "esbuild-rails": "^1.0.3",
+    "mrujs": "^0.10.1"
+  },
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "build:default": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets"
+  },
+  "resolutions": {
+    "stimulus_reflex": "stimulusreflex/dev-builds#stimulus_reflex/fca2958",
+    "stimulus_reflex/cable_ready": "cableready/dev-builds#cable_ready/05e2f1b"
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>StimulusReflex Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <% if respond_to?(:javascript_pack_tag) %>
+    <%= javascript_pack_tag "application", defer: true %>
+    <% elsif respond_to?(:javascript_importmap_tags) %>
+    <%= javascript_importmap_tags %>
+    <% elsif respond_to?(:javascript_include_tag) %>
+    <%= javascript_include_tag "application", defer: true %>
+    <% end %>
+
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  </head>
+
+  <body>
+    <main class="container">
+      <button data-reflex="click->Example#dance">Dance!</button>
+      <div id="dance"></div>
+    </main>
+    <%= stream_from :all_users %>
+  </body>
+</html>
